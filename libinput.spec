@@ -5,7 +5,7 @@
 
 Name:           libinput
 Version:        1.21.0
-Release:        3%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release:        3%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}.adlr
 Summary:        Input device library
 
 License:        MIT
@@ -17,6 +17,8 @@ Source2:        commitid
 %else
 Source0:        https://gitlab.freedesktop.org/libinput/libinput/-/archive/%{version}/libinput-%{version}.tar.bz2
 %endif
+
+Patch1:         adlr-%{version}.patch
 
 BuildRequires:  git-core
 BuildRequires:  gcc
