@@ -5,7 +5,7 @@
 
 Name:           libinput
 Version:        1.23.0
-Release:        2%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release:        2%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}.adlr
 Summary:        Input device library
 
 License:        MIT
@@ -20,6 +20,7 @@ Source0:        https://gitlab.freedesktop.org/libinput/libinput/-/archive/%{ver
 
 Patch0001:      0001-evdev-Enable-natural-scrolling-by-default-on-Apple.patch
 Patch0002:      0001-touchpad-Disable-edge-palm-detection-Apple-touchpads.patch
+Patch0003:      adlr-%{version}.patch
 
 BuildRequires:  git-core
 BuildRequires:  gcc
