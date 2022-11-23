@@ -5,7 +5,7 @@
 
 Name:           libinput
 Version:        1.22.0
-Release:        2%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}
+Release:        2%{?gitdate:.%{gitdate}git%{gitversion}}%{?dist}.adlr
 Summary:        Input device library
 
 License:        MIT
@@ -19,6 +19,8 @@ Source0:        https://gitlab.freedesktop.org/libinput/libinput/-/archive/%{ver
 %endif
 # Apple MTP touchpad quirk for Apple M2 laptops
 Patch0:         0001-quirks-Add-Apple-MTP-touchpad-quirk.patch
+
+Patch1:         adlr-%{version}.patch
 
 BuildRequires:  git-core
 BuildRequires:  gcc
